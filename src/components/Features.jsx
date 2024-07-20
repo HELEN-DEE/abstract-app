@@ -48,18 +48,18 @@ const featureCard = [
 
 const Features = () => {
     return (
-        <section className="grid lg:grid-cols-2 px-28 py-32 gap-24 ">
-            {featureCard.map((feature, index) => (
-                <div key={index} className="flex gap-5">
-                    <img src={feature.img} alt="icon-img" className="h-[90px]" />
-                    <div>
-                        <h1 className="font-bold text-2xl">{feature.mainText}</h1>
-                        <p className="text-2xl ">{feature.subText}</p>
-                        <a href={feature.path} className="text-[#4C5FD5] text-xl" > Learn more <span></span></a>
-                    </div>
-                </div>
-            ))}
-        </section>
+        <section className="grid lg:grid-cols-2 lg:px-28 py-20 lg:gap-24 gap-16 grid-cols-1 px-10">
+    {featureCard.map((feature, index) => (
+        <div key={index} className="flex gap-5">
+            <img src={feature.img} alt={`icon for ${feature.mainText}`} className="lg:h-20 h-16 lg:w-20 w-16" />
+            <div>
+                <h1 className="font-bold text-2xl">{feature.mainText}</h1>
+                <p className="text- xl">{feature.subText}</p>
+                <a href={feature.path} className="text-[#4C5FD5] text-xl hover:underline"> Learn more <span></span></a>
+            </div>
+        </div>
+    ))}
+</section>
     )
 }
 

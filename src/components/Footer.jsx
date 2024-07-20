@@ -47,21 +47,21 @@ const footerLinks = [
 const Footer = () => {
     return (
         <footer className='bg-black text-white lg:px-24  px-12 py-6'>
-            <div className='grid lg:grid-cols-4 lg:w-[65%]'>
+            <div className='grid lg:grid-cols-4 lg:w-[65%] grid-cols-2  lg:gap-0 gap-x-12 gap-y-7'>
                 {footerLinks.filter(link => link.mainText !== "Contact Us").map((footer, index) => (
                     <div key={index}>
-                        <h1 className='text-2xl font-bold pb-4'>{footer.mainText}</h1>
+                        <h1 className='lg:text-2xl text-base font-bold lg:pb-4 pb-2'>{footer.mainText}</h1>
                         <ul>
-                            {footer.labels.map((item, idx) => (
-                                <li key={idx}>
-                                    <a href={item.path} className='capitalize hover:underline'>{item.label}</a>
+                            {footer.labels.map((item, index) => (
+                                <li key={index}>
+                                    <a href={item.path} className='capitalize hover:underline '>{item.label}</a>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 ))}
             </div>
-            <div className='lg:flex lg:justify-end lg:w-[62%]'>
+            <div className='flex justify-end lg:w-[62%] '>
                 {footerLinks.filter(link => link.mainText === "Contact Us").map((footer, index) => (
                     <div key={index}>
                         <h1 className='text-base font-bold'>{footer.mainText}</h1>
@@ -75,9 +75,9 @@ const Footer = () => {
                     </div>
                 ))}
             </div>
-            <div className='text-end'>
+            <div className='lg:text-end'>
                 
-                <p className='text-xl'>© Copyright 2023
+                <p className='lg:text-xl text-md pt-4'>© Copyright 2023
                     <br />Abstract Studio Design, Inc.
                     <br />All rights reserved</p>
             </div>
